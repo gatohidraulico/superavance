@@ -1,0 +1,406 @@
+/**Reseteo**/
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  /** Reset para REMS - 62.5% = 10px de 16px **/
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Cabin Condensed', sans-serif;
+  font-size: 1.6rem;
+  line-height: 2;
+}
+
+/**Globales**/
+img {
+  max-width: 100%;
+}
+
+.container {
+  width: 95%;
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 3.8rem;
+}
+
+h2 {
+  font-size: 3.4rem;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+h4 {
+  font-size: 2.6rem;
+}
+
+p {
+  font-size: 2rem;
+}
+
+/**UTILIDADES**/
+.seccion {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.fw-900 {
+  font-weight: 900;
+}
+
+.fw-500 {
+  font-weight: 500;
+}
+
+.fw-300 {
+  font-weight: 300;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.orange {
+  color: orange;
+}
+
+/*NAVBAR*/
+.navbar input[type="checkbox"],
+.navbar .hambuer-lines {
+  display: none;
+}
+
+.navbar {
+  box-shadow: 0px 0.5rem 1rem 0px #aaa;
+  position: relative;
+  width: 100%;
+  background: rgb(30, 225, 30);
+  color: white;
+  opacity: 0.85;
+  height: auto;
+  z-index: 12;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  height: auto;
+  align-items: center;
+}
+
+.menu-items {
+  order: 2;
+  display: flex;
+}
+
+.menu-items li {
+  list-style: none;
+  margin-top: 1.5rem;
+  margin-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+}
+
+.menu-items a {
+  text-decoration: none;
+  color: white;
+  font-weight: 900;
+  transition: 0.3s ease-in-out;
+}
+
+.menu-items a:hover {
+  color: rgb(234, 170, 51);
+  transition: 0.3s ease-in-out;
+}
+
+.logo {
+  order: 1;
+  margin-right: 5;
+}
+
+@media (max-width:768px) {
+  .navbar {
+    opacity: 0.95;
+  }
+
+  .navbar-container input[type="checkbox"],
+  .navbar-container .hamburger-lines {
+    display: block;
+  }
+
+  .navbar-container {
+    display: block;
+    position: relative;
+    height: 6.4rem;
+  }
+
+  .navbar-container input[type="checkbox"] {
+    position: absolute;
+    display: block;
+    height: 3.2rem;
+    width: 3rem;
+    top: 2rem;
+    left: 2rem;
+    z-index: 5;
+    opacity: 0;
+  }
+
+  .navbar-container .hamburger-lines {
+    display: block;
+    height: 2.3rem;
+    width: 3.5rem;
+    position: absolute;
+    top: 1.7rem;
+    left: 2rem;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .navbar-container .hamburger-lines .line {
+    display: block;
+    height: 0.4rem;
+    width: 100%;
+    border-radius: 1rem;
+    background: rgb(255, 255, 255);
+  }
+
+  .navbar-container .hamburger-lines .line1 {
+    transform-origin: 0% 0%;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .navbar-container .hamburger-lines .line2 {
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .navbar-container .hamburger-lines .line3 {
+    transform-origin: 0% 100%;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .navbar .menu-items {
+    padding-top: 100px;
+    background: rgb(139, 228, 87);
+    height: 100vh;
+    max-width: 300px;
+    transform: translate(-150%);
+    display: flex;
+    flex-direction: column;
+    margin-left: -40px;
+    padding-left: 50px;
+    transition: transform 0.5s ease-in-out;
+    box-shadow: 5px 0px 10px 0px #aaa;
+  }
+
+  .navbar .menu-items li {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    font-weight: 500;
+  }
+
+  .logo {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    font-size: 2rem;
+  }
+
+  .navbar-container input[type="checkbox"]:checked~.menu-items {
+    transform: translateX(0);
+  }
+
+  .navbar-container input[type="checkbox"]:checked~.hamburger-lines .line1 {
+    transform: rotate(35deg);
+  }
+
+  .navbar-container input[type="checkbox"]:checked~.hamburger-lines .line2 {
+    transform: scaleY(0);
+  }
+
+  .navbar-container input[type="checkbox"]:checked~.hamburger-lines .line3 {
+    transform: rotate(-35deg);
+  }
+}
+
+/**Slider**/
+.slider {
+  background-image: url(../img/confeti.png);
+  background-position: center center;
+}
+
+.slider li {
+  margin-right: 3rem;
+}
+
+.slider li img {
+  width: 100%;
+}
+
+.slider button {
+  visibility: hidden;
+}
+
+.back-kids {
+  background-image: url(../img/fondo.jpg);
+  background-position: center center;
+  background-size: cover;
+  height: 40rem;
+  display: flex;
+  align-items: center;
+  ;
+}
+
+/*Logo Kids*/
+.fondo-logo {
+  background-color: rgb(128, 255, 54);
+  background-size: 100%;
+  background-position: center center;
+}
+
+@media (min-width: 768px) {
+  .contenido-main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 2rem;
+    align-items: center;
+  }
+}
+
+.contenido-logo {
+  margin: 1 2rem;
+}
+
+.contenido-logo img {
+  max-width: 30rem;
+}
+
+@media (min-width: 768px) {
+  .contenido-logo img {
+    max-width: calc(100%-2rem);
+  }
+}
+
+.texto-logo {
+  color: black;
+  font-weight: 500;
+  font-size: 50rem;
+}
+
+.imagen-laberinto {
+  margin: 1rem 2rem;
+}
+
+/*Banderola*/
+
+/*Paquetes*/
+.fondo-paquetes{
+  background: url(../img/confeti.png);
+  position: center center;
+}
+@media (min-width: 768px) {
+  .image-size {
+    width: calc(100%-1rem);
+  }
+}
+@media (min-width: 768px) {
+  .contenedor-imagenes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.info-paquetes img{
+  background: url(../img/fondov.png);
+  position: center center;
+  background-repeat: none;
+  background-size: cover;
+}
+.info-paquetes h2{
+  background-color: rgb(201, 243, 138);
+}
+@media (min-width: 768px) {
+  .info-paquetes {
+      flex-basis: calc(33.3% - 1rem);
+      padding: 0 2rem;
+      
+  }
+}
+
+.info-paquetes h2{
+  text-transform: uppercase;
+  color: orange;
+}
+/*Candy-bar*/
+/*.fondo-candybar{
+  background: brown;
+  background-position: center center;
+  background-size: cover;
+*/
+@media (min-width: 768px) {
+  .contenedor-candybar {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 2rem;
+    align-items: center;
+  }
+}
+/*Galeria de Imagenes*/
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px;
+}
+
+/* Style the images inside the grid */
+.column img {
+  opacity: 0.8; 
+  cursor: pointer; 
+}
+
+.column img:hover {
+  opacity: 1;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The expanding image container */
+.containero {
+  position: relative;
+  display: none;
+}
+
+/* Expanding image text */
+#imgtext {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+  font-size: 20px;
+}
+
+/* Closable button inside the expanded image */
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: black;
+  font-size: 35px;
+  cursor: pointer;
+}

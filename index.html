@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KIDSLANDIA - ¡SALON DE EVENTOS INFANTILES</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin+Condensed&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="navbar-container container">
+            <input type="checkbox" name="" id="">
+            <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+            <ul class="menu-items">
+                <li><a href="#">GALERIA</a></li>
+                <li><a href="#">PAQUETES</a></li>
+                <li><a href="#">CONTACTO</a></li>
+                <li><a href="#">NUESTROS SERVICIOS</a></li>
+            </ul>
+            <div class="logo">
+                <a href="#"><img src="img/logo.svg" alt=""></a>
+            </div>
+        </div>
+    </header>
+    <ul class="slider">
+        <li><img src="img/slide1.jpg" alt=""></li>
+        <li><img src="img/slide2.jpg" alt=""></li>
+        <li><img src="img/slide3.jpg" alt=""></li>
+        <li><img src="img/slide4.jpg" alt=""></li>
+    </ul>
+
+    <main class="fondo-logo seccion container">
+        <div class="contenido-main">
+            <div class="contenido-logo center-text">
+                <img src="img/logokids_back.png" alt="">
+                <div class="texto-logo">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam dolore recusandae inventore
+                        possimus? Praesentium eveniet a, ipsa aut porro consectetur at nam quo dignissimos iure dicta
+                        pariatur incidunt illo soluta.</p>
+                </div>
+            </div>
+            <div>
+                <div class="imagen-laberinto">
+                    <img src="img/modular.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="fondo-banderola">
+        <div class="seccion center-text image-size">
+            <img src="img/paquetes4.png" alt="">
+        </div>
+    </div>
+    <div class="fondo-paquetes">
+        <div class="container seccion">
+            <div class="contenedor-imagenes">
+                <div class="info-paquetes seccion">
+                    <img src="img/coneja.png" alt="">
+                    <h2 class="center-text fw-900">"coneja"</h2>
+                </div>
+                <div class="info-paquetes seccion">
+                    <img src="img/cuyo.png" alt="">
+                    <h2 class="center-text fw-900">"cuyito"</h2>
+                </div>
+                <div class="info-paquetes seccion">
+                    <img src="img/Free Clipart Images.png" alt="">
+                    <h2 class="center-text fw-900">"ardilla"</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fondo-logo">
+        <div class="fondo-logo seccion container">
+            <div class="contenido-main">
+                <div class="contenido-logo center-text">
+                    <img src="img/candybar.png" alt="">
+                    <div class="texto-logo">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam dolore recusandae inventore
+                            possimus? Praesentium eveniet a, ipsa aut porro consectetur at nam quo dignissimos iure
+                            dicta
+                            pariatur incidunt illo soluta.</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="imagen-laberinto">
+                        <img src="img/fuente.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="center-text fw-900">
+        <h2>EVENTOS PASADOS</h2>
+        <p>Algunos de nuestros eventos anteriores</p>
+    </div>
+
+    <div>
+    <div class="row">
+        <div class="column">
+          <img src="img/coneja.png" alt="ejemplo" style="width:100%" onclick="myFunction(this);">
+        </div>
+        <div class="column">
+          <img src="img/cuyo.png" alt="ejemplo" style="width:100%" onclick="myFunction(this);">
+        </div>
+        <div class="column">
+          <img src="img/Free Clipart Images.png" alt="ejemplo" style="width:100%" onclick="myFunction(this);">
+        </div>
+        <div class="column">
+          <img src="img/pelotas.jpg" alt="ejemplo" style="width:100%" onclick="myFunction(this);">
+        </div>
+      </div>
+
+      <div class="containero">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+        <img id="expandedImg" style="width:100%">
+        <div id="imgtext"></div>
+      </div>
+      <script>
+        function myFunction(imgs) {
+          var expandImg = document.getElementById("expandedImg");
+          var imgText = document.getElementById("imgtext");
+          expandImg.src = imgs.src;
+          imgText.innerHTML = imgs.alt;
+          expandImg.parentElement.style.display = "block";
+        }
+        </script>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script type="text/javascript">
+        $('.slider').slick({
+            centerMode: true,
+            centerPadding: '60px',
+            slidesToShow: 3,
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        arrows: false,
+                        centerMode: true,
+                        centerPadding: '40px',
+                        slidesToShow: 3
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        arrows: false,
+                        centerMode: true,
+                        centerPadding: '40px',
+                        slidesToShow: 1
+                    }
+                }
+            ]
+        });
+    </script>
+ 
+</body>
+
+</html>
